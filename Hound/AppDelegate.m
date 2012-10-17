@@ -10,14 +10,18 @@
 
 #import "ViewController.h"
 
+#import "DrinksVC.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    DrinksVC *vc = [[DrinksVC alloc] initWithNibName:nil bundle: nil];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = nvc;
     [self.window makeKeyAndVisible];
     return YES;
 }

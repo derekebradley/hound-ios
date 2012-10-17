@@ -10,6 +10,8 @@
 
 @interface DrinksVC ()
 
+@property (nonatomic, strong) UITableView *tableView;
+
 @end
 
 @implementation DrinksVC
@@ -21,6 +23,15 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)loadView {
+    self.view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 640)];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight   |
+    UIViewAutoresizingFlexibleWidth;
+    [self.view addSubview:self.tableView];
 }
 
 - (void)viewDidLoad
