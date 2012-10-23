@@ -1,0 +1,14 @@
+
+PODS:
+- AFNetworking (HEAD based on 1.0)
+- Reachability (3.0.0)
+
+DEPENDENCIES:
+- AFNetworking (HEAD)
+- Reachability
+
+SPEC CHECKSUMS:
+  AFNetworking: 758a1cb1ab5a0d22795ba1c44abb9cad395bc126
+  Reachability: 500bd76bf6cd8ff2c6fb715fc5f44ef6e4c024f2
+
+COCOAPODS: 0.15.2
