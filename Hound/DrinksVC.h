@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DrinksVC : UIViewController
+@interface DrinksVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
