@@ -2,7 +2,7 @@
 //  User.m
 //  Hound
 //
-//  Created by miso on 10/16/12.
+//  Created by Katie Smillie on 11/20/12.
 //
 //
 

@@ -7,11 +7,13 @@
 //
 
 #import "DrinksVC.h"
-#import "UIImageView+AFNetworking.h"
+#import "Drink.h"
+#import "DrinkCell.h"  
 
 @interface DrinksVC ()
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *drinks;
 
 @end
 
@@ -21,7 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.drinks = [Drink recentDrinks];
     }
     return self;
 }
@@ -30,8 +32,7 @@
     self.view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 640)];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
-    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight  |
-    UIViewAutoresizingFlexibleWidth;
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
@@ -58,32 +59,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return [self.drinks count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    static NSString *CellIdentifier = @"Cell";
 //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    UITableViewCell *cell;
     
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    DrinkCell *cell = [[DrinkCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    NSURL *url = nil;
-    
-    if (indexPath.row == 0)
-    {
-        url = [NSURL URLWithString:@"http://24.media.tumblr.com/tumblr_maj73brwmH1ro3h6zo1_1280.jpg"];
-    } else if (indexPath.row == 1)
-    {
-        url = [NSURL URLWithString:@"http://sphotos-b.xx.fbcdn.net/hphotos-ash3/c0.0.403.403/p403x403/643984_881386677004_1737261116_n.jpg"];
-    } else if (indexPath.row == 2)
-    {
-        url = [NSURL URLWithString:@"http://24.media.tumblr.com/tumblr_mazya7AYSs1ro3h6zo1_1280.jpg"];
-    }
-             
-    [cell.imageView setImageWithURL:url];
+    Drink *drink = [self.drinks objectAtIndex:indexPath.row];
+    cell.drink = drink;
     
     return cell;
 }

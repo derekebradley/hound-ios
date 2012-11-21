@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D326DBA165C489C00447E7B /* DrinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D326DB9165C489C00447E7B /* DrinkCell.m */; };
+		2DF5DD38165C6DC40068D0BF /* DrinkCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF5DD37165C6DC40068D0BF /* DrinkCellView.m */; };
+		2DF5DD3D165C88260068D0BF /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF5DD3C165C88260068D0BF /* Drink.m */; };
+		2DF5DD40165C883F0068D0BF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF5DD3F165C883F0068D0BF /* User.m */; };
 		311D8802A75544DA81B39902 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA83AAF2F9B4B10BD0B1523 /* libPods.a */; };
 		42705ED2162E486100A347F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42705ED1162E486100A347F9 /* UIKit.framework */; };
 		42705ED4162E486100A347F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42705ED3162E486100A347F9 /* Foundation.framework */; };
@@ -23,6 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D326DB8165C489C00447E7B /* DrinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkCell.h; sourceTree = "<group>"; };
+		2D326DB9165C489C00447E7B /* DrinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkCell.m; sourceTree = "<group>"; };
+		2DF5DD36165C6DC40068D0BF /* DrinkCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkCellView.h; sourceTree = "<group>"; };
+		2DF5DD37165C6DC40068D0BF /* DrinkCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkCellView.m; sourceTree = "<group>"; };
+		2DF5DD3B165C88260068D0BF /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
+		2DF5DD3C165C88260068D0BF /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
+		2DF5DD3E165C883F0068D0BF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2DF5DD3F165C883F0068D0BF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		42705ECD162E486100A347F9 /* Hound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42705ED1162E486100A347F9 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42705ED3162E486100A347F9 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +72,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DF5DD3A165C87FD0068D0BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DF5DD3B165C88260068D0BF /* Drink.h */,
+				2DF5DD3C165C88260068D0BF /* Drink.m */,
+				2DF5DD3E165C883F0068D0BF /* User.h */,
+				2DF5DD3F165C883F0068D0BF /* User.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		42705EC2162E486100A347F9 = {
 			isa = PBXGroup;
 			children = (
@@ -92,12 +115,17 @@
 		42705ED7162E486100A347F9 /* Hound */ = {
 			isa = PBXGroup;
 			children = (
+				2DF5DD3A165C87FD0068D0BF /* Models */,
 				42705EE0162E486100A347F9 /* AppDelegate.h */,
 				42705EE1162E486100A347F9 /* AppDelegate.m */,
 				5DE96176162E4D5600EE03A2 /* DrinksVC.h */,
 				5DE96177162E4D5600EE03A2 /* DrinksVC.m */,
 				42705EE9162E486100A347F9 /* ViewController.h */,
 				42705EEA162E486100A347F9 /* ViewController.m */,
+				2D326DB8165C489C00447E7B /* DrinkCell.h */,
+				2D326DB9165C489C00447E7B /* DrinkCell.m */,
+				2DF5DD36165C6DC40068D0BF /* DrinkCellView.h */,
+				2DF5DD37165C6DC40068D0BF /* DrinkCellView.m */,
 				42705EEC162E486100A347F9 /* ViewController.xib */,
 				42705ED8162E486100A347F9 /* Supporting Files */,
 			);
@@ -205,6 +233,10 @@
 				42705EE2162E486100A347F9 /* AppDelegate.m in Sources */,
 				42705EEB162E486100A347F9 /* ViewController.m in Sources */,
 				5DE96178162E4D5600EE03A2 /* DrinksVC.m in Sources */,
+				2D326DBA165C489C00447E7B /* DrinkCell.m in Sources */,
+				2DF5DD38165C6DC40068D0BF /* DrinkCellView.m in Sources */,
+				2DF5DD3D165C88260068D0BF /* Drink.m in Sources */,
+				2DF5DD40165C883F0068D0BF /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
