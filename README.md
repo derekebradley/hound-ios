@@ -1,10 +1,6 @@
 # Hound, an iOS app
 
-Your New Happy Hour Companion. 
-
-Hound is the easiest way to share drinks you love with the world. Forget reading bar and restaurant reviews, get real recommendations about booze and places to find it. Happy hours and drink specials change every day, with Hound you can discover and experience great drinks around you. The more you Hound, the more the drinks are on the house. Earn rewards for frequenting your favorite places. It's a big world out there, the least we can do is help you find a good cocktail.
-
-More info [here][1].
+Your New Happy Hour Companion.
 
 ## Dependencies
 
